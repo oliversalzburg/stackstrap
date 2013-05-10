@@ -1,0 +1,21 @@
+{
+  "name"            :"Stackstrap",
+  "version"         :"0.1",
+  "manifest_version":2,
+  "description"     :"Applies Bootstrap to StackExchange pages",
+  "content_scripts" :[
+    {
+      "exclude_globs"  :[],
+      "exclude_matches":[],
+      "include_globs"  :["http://superuser.com/*","http://stackoverflow.com/*","http://serverfault.com/*"],
+      "css"            :["lib/css/bootstrap.min.css","lib/css/bootstrap-responsive.min.css"],
+      "js"             :["lib/js/bootstrap.min.js","stackstrap.user.js"],
+      "matches"        :["http://*/*", "https://*/*"],
+      "run_at"         :"document_idle"
+    }
+  ],
+  "permissions"     :[
+    "http://superuser.com/"
+  ]
+
+}
